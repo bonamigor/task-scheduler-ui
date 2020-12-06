@@ -1,4 +1,4 @@
-<div>
+<div class="app">
   <div class="flex-container" fxLayout="row">
     <mat-toolbar color="primary">
       <a mat-button routerLink="/"><h2>Task Scheduler</h2></a>
@@ -9,6 +9,9 @@
       </div>
     </mat-toolbar>
   </div>
-</div>
 
-<router-outlet></router-outlet>
+
+  <div fxFlexFill>
+    <router-outlet></router-outlet>
+  </div>
+</div>

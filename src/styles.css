@@ -2,9 +2,17 @@
 
 html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
 }
 
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-image: url('/assets/logo_zg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
