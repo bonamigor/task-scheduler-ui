@@ -10,11 +10,13 @@ import {AngularMaterialModule} from './angular-material.module';
 import {CadastroUsuarioComponent} from './components/usuarios/cadastro-usuario/cadastro-usuario.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
+import {LoginComponent} from './components/login/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CadastroUsuarioComponent
+    CadastroUsuarioComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
