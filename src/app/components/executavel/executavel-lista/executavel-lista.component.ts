@@ -3,6 +3,7 @@ import {Executavel} from '../../../models/executavel.model';
 import {ExecutavelService} from '../../../services/executavel.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
+import {ExecucaoService} from '../../../services/execucao.service';
 
 @Component({
   selector: 'app-executavel-lista',
@@ -13,7 +14,10 @@ export class ExecutavelListaComponent implements OnInit, OnDestroy {
   executaveis: Executavel[];
   subscricao: Subscription;
 
-  constructor(private executavelService: ExecutavelService, private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private executavelService: ExecutavelService,
+              private execucaoService: ExecucaoService,
+              private activatedRoute: ActivatedRoute,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -34,15 +38,21 @@ export class ExecutavelListaComponent implements OnInit, OnDestroy {
   }
 
   onRemoverExecutavel(executavel: Executavel): void {
-    if (confirm('Deseja realmente remover a execução: ' + executavel.titulo + '?')) {
+    if (confirm('Deseja realmente remover o executável: ' + executavel.titulo + '?')) {
       this.executavelService.removerExecutavel(executavel.id);
       this.router.navigate(['executaveis']);
-      console.log('removeu executavel');
     }
   }
 
   onSelecionarExecutavel(executavel: Executavel): void {
     this.router.navigate([executavel.id, 'edicao'], {relativeTo: this.activatedRoute});
+  }
+
+  onDispararExecucao(executavel: Executavel): void {
+    if (confirm('Deseja realmente iniciar a execução: ' + executavel.titulo + '?')) {
+      this.execucaoService.criarNovaExecucao(executavel);
+      this.router.navigate(['execucoes']);
+    }
   }
 
 }
