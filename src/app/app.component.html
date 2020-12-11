@@ -12,6 +12,7 @@
         <a mat-button *ngIf="!existeUsuarioAutenticado()" routerLink="/cadastro">Cadastre-se</a>
         <a mat-button *ngIf="existeUsuarioAutenticado()" routerLink="/executaveis">Executáveis</a>
         <a mat-button *ngIf="existeUsuarioAutenticado()" routerLink="/execucoes">Execuções</a>
+        <a mat-button *ngIf="existeUsuarioAutenticado()" routerLink="/agendamentos">Agendamentos</a>
         <a mat-button *ngIf="existeUsuarioAutenticado()" (click)="realizarLogout()" routerLink="/">Sair
           <mat-icon>login</mat-icon>
         </a>

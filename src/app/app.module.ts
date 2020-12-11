@@ -10,7 +10,7 @@ import {AngularMaterialModule} from './angular-material.module';
 import {CadastroUsuarioComponent} from './components/usuarios/cadastro-usuario/cadastro-usuario.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MAT_DATE_LOCALE} from '@angular/material/core';
-import {LoginComponent} from './components/login/login/login.component';
+import {LoginComponent} from './components/login/login.component';
 import {ExecutavelListaComponent} from './components/executavel/executavel-lista/executavel-lista.component';
 import {ExecutavelEdicaoComponent} from './components/executavel/executavel-edicao/executavel-edicao.component';
 import {ExecutavelComponent} from './components/executavel/executavel.component';
@@ -19,6 +19,8 @@ import {ExecucaoComponent} from './components/execucao/execucao.component';
 import {ExecucaoListaComponent} from './components/execucao/execucao-lista/execucao-lista.component';
 import {ExecucaoDetalhesComponent} from './components/execucao/execucao-detalhes/execucao-detalhes.component';
 import {ExecucaoInicioComponent} from './components/execucao/execucao-inicio/execucao-inicio.component';
+import {AgendamentosComponent} from './components/agendamentos/agendamentos.component';
+import {AgendamentoNovoDialogComponent} from './components/agendamentos/agendamento-novo-dialog/agendamento-novo-dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import {ExecucaoInicioComponent} from './components/execucao/execucao-inicio/exe
     ExecucaoComponent,
     ExecucaoListaComponent,
     ExecucaoDetalhesComponent,
-    ExecucaoInicioComponent
+    ExecucaoInicioComponent,
+    AgendamentosComponent,
+    AgendamentoNovoDialogComponent
   ],
   imports: [
     BrowserModule,
